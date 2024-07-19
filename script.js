@@ -1,10 +1,14 @@
 function handleResponse(response) {
-    const content = document.getElementById('content');
-    const responseContainer = document.getElementById('response-container');
+    const mainQuestion = document.getElementById('main-question');
+    const subtext = document.getElementById('subtext');
+    const buttons = document.getElementById('buttons');
     const responseMessage = document.getElementById('response-message');
     
-    content.style.display = 'none';
-    responseContainer.classList.remove('hidden');
+    mainQuestion.style.display = 'none';
+    subtext.style.display = 'none';
+    buttons.style.display = 'none';
+
+    responseMessage.classList.remove('hidden');
 
     if (response === 'sim') {
         responseMessage.textContent = 'Que ótimo! Estou muito feliz!';
