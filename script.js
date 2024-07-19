@@ -4,9 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (yesButton) {
         yesButton.addEventListener('click', function() {
-            setTimeout(() => {
-                window.location.href = 'second-page.html';
-            }, 500); // Adiciona um pequeno atraso para permitir a visualização da mensagem
+            showMessage('Você aceitou o pedido! 💖 Estou tão feliz por você ter aceitado! 🌟 Vamos viver muitos momentos incríveis juntos!');
         });
     }
 
@@ -23,7 +21,7 @@ function showMessage(text) {
     message.style.display = 'block';
     setTimeout(() => {
         message.style.display = 'none';
-    }, 3000);
+    }, 5000); // Exibe a mensagem por 5 segundos
 }
 
 function createHearts() {
