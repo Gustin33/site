@@ -19,8 +19,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background: linear-gradient(135deg, #ff6699, #ff3366);
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     border-radius: 50%;
+    clip-path: path('M 150,100 Q 200,20 250,100 T 350,200 Q 250,300 150,200 Q 50,100 150,100 Z');
     opacity: 0.4;
     z-index: -1;
     animation: float 8s infinite ease-in-out;
