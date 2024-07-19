@@ -1,6 +1,6 @@
 function handleResponse(response) {
     const mainQuestion = document.getElementById('main-question');
-    const subtext = document.getElementById('subtext');
+    const subtext = document.querySelector('.subtext');
     const buttons = document.getElementById('buttons');
     const responseMessage = document.getElementById('response-message');
     
