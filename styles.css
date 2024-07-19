@@ -23,6 +23,14 @@ body {
     position: relative;
 }
 
+#initial-page {
+    display: block;
+}
+
+#response-page {
+    display: none;
+}
+
 h1 {
     font-size: 3em; /* Maior tamanho para destaque */
     margin: 0;
