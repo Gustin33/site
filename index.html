@@ -8,15 +8,16 @@
 </head>
 <body>
     <div id="container">
-        <h1>Você aceita namorar comigo?</h1>
+        <h1>Quer namorar comigo?</h1>
         <div id="buttons">
-            <button onclick="confirmChoice('sim')">Sim</button>
-            <button onclick="confirmChoice('nao')">Não</button>
+            <button onclick="handleResponse('sim')">Sim</button>
+            <button onclick="handleResponse('nao')">Não</button>
         </div>
     </div>
 
-    <div id="message-container" style="display: none;">
-        <div id="message"></div>
+    <div id="response-container" style="display: none;">
+        <div id="response-message"></div>
+        <div id="hearts"></div>
     </div>
 
     <script src="script.js"></script>
