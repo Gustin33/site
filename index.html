@@ -8,25 +8,24 @@
 </head>
 <body>
     <div id="container">
-        <div id="content">
-            <div id="initial-page">
-                <h1 id="main-question">Quer namorar comigo?</h1>
-                <div class="subtext">Clique em um dos botões abaixo:</div>
-                <div id="buttons">
-                    <button onclick="handleResponse('sim')">Sim</button>
-                    <button onclick="handleResponse('nao')">Não</button>
-                </div>
+        <div id="initial-page">
+            <h1 id="main-question">Quer namorar comigo?</h1>
+            <div class="subtext">Clique em um dos botões abaixo:</div>
+            <div id="buttons">
+                <button onclick="handleResponse('sim')">Sim</button>
+                <button onclick="handleResponse('nao')">Não</button>
             </div>
-            <div id="response-page" class="hidden">
-                <div id="response-message">
-                    <div id="heart-container">
-                        <!-- Corações flutuantes -->
-                        <div class="heart"></div>
-                        <div class="heart" style="left: 20%; animation-delay: 1s;"></div>
-                        <div class="heart" style="left: 40%; animation-delay: 2s;"></div>
-                        <div class="heart" style="left: 60%; animation-delay: 3s;"></div>
-                    </div>
+        </div>
+        <div id="response-page" class="hidden">
+            <div id="response-message">
+                <div id="heart-container">
+                    <!-- Corações flutuantes -->
+                    <div class="heart"></div>
+                    <div class="heart" style="left: 20%; animation-delay: 1s;"></div>
+                    <div class="heart" style="left: 40%; animation-delay: 2s;"></div>
+                    <div class="heart" style="left: 60%; animation-delay: 3s;"></div>
                 </div>
+                <p id="response-text"></p>
             </div>
         </div>
     </div>
