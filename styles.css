@@ -46,4 +46,30 @@ button {
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    transition: background-col
+    transition: background-color 0.3s, transform 0.3s;
+    outline: none;
+}
+
+button:first-of-type {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button:last-of-type {
+    background-color: #f44336;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#response-message {
+    font-size: 2em;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
