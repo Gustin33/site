@@ -3,35 +3,48 @@ body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     overflow: hidden;
+    background: linear-gradient(135deg, #ff6b6b, #f06595); /* Fundo gradiente */
 }
 
 #container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(135deg, #ff6b6b, #f06595);
+}
+
+#content {
     text-align: center;
     color: white;
+    background: rgba(0, 0, 0, 0.6); /* Fundo translúcido */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
     font-size: 3em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.subtext {
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
 
 #buttons {
     display: flex;
+    justify-content: center;
     gap: 20px;
 }
 
 button {
     padding: 15px 30px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     border: none;
-    border-radius: 15px;
+    border-radius: 25px; /* Borda mais arredondada */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     outline: none;
@@ -49,7 +62,7 @@ button:last-of-type {
 
 button:hover {
     transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 #response-container {
@@ -85,18 +98,18 @@ button:hover {
 .heart {
     position: absolute;
     background: red;
-    width: 50px; /* Larger size */
-    height: 50px; /* Larger size */
+    width: 50px; /* Maior tamanho */
+    height: 50px; /* Maior tamanho */
     border-radius: 50%;
     transform: rotate(-45deg);
-    animation: heart-float 8s infinite; /* Slower animation */
+    animation: heart-float 8s infinite; /* Animação mais lenta */
 }
 
 .heart:before, .heart:after {
     content: '';
     background: red;
-    width: 50px; /* Larger size */
-    height: 50px; /* Larger size */
+    width: 50px; /* Maior tamanho */
+    height: 50px; /* Maior tamanho */
     border-radius: 50%;
     position: absolute;
 }
