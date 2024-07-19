@@ -83,3 +83,40 @@ button:hover {
     animation: float 3s infinite;
     opacity: 0.5;
 }
+/* Estilo para a segunda página */
+.message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #ffccff; /* Gradiente rosa */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.message-container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.message-container p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff66b2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.back-button:hover {
+    background: #ff99cc;
+}
