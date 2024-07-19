@@ -45,17 +45,11 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para melhor legibilidade */
 }
 
-.subtext {
-    font-size: 1.5em; /* Tamanho aumentado para clareza */
-    margin-bottom: 20px;
-    color: #ffd1dc; /* Cor suave para a subtexto */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra leve */
-}
-
 #buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin-top: 20px;
 }
 
 button {
@@ -110,36 +104,36 @@ button:hover {
 
 .heart {
     position: absolute;
-    background: radial-gradient(circle at 30% 30%, #ff4d4d, #ff0000); /* Gradiente para efeito de coração */
-    width: 80px;
-    height: 80px;
+    background: radial-gradient(circle at 30% 30%, #ff6b6b, #ff4d4d); /* Gradiente para efeito de coração */
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     transform: rotate(-45deg);
     animation: heart-float 12s infinite ease-in-out;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .heart:before, .heart:after {
     content: '';
-    background: radial-gradient(circle at 30% 30%, #ff4d4d, #ff0000);
-    width: 80px;
-    height: 80px;
+    background: radial-gradient(circle at 30% 30%, #ff6b6b, #ff4d4d);
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     position: absolute;
 }
 
 .heart:before {
-    top: -40px;
+    top: -50px;
     left: 0;
 }
 
 .heart:after {
-    left: 40px;
+    left: 50px;
     top: 0;
 }
 
 @keyframes heart-float {
-    0% { transform: translateY(0) rotate(-45deg); opacity: 0.7; }
+    0% { transform: translateY(0) rotate(-45deg); opacity: 0.8; }
     50% { transform: translateY(-50vh) rotate(-45deg); opacity: 0.5; }
     100% { transform: translateY(-100vh) rotate(-45deg); opacity: 0; }
 }
