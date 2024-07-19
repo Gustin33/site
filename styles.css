@@ -140,3 +140,19 @@ button:hover {
     50% { transform: translateY(-50vh) rotate(-45deg); opacity: 0.5; }
     100% { transform: translateY(-100vh) rotate(-45deg); opacity: 0; }
 }
+
+/* Estilo para gerar múltiplos corações */
+@keyframes heart-flutter {
+    0% { transform: translateY(0) rotate(-45deg); }
+    50% { transform: translateY(-50vh) rotate(-45deg); }
+    100% { transform: translateY(-100vh) rotate(-45deg); }
+}
+
+.heart:nth-child(1) { left: 10%; animation: heart-flutter 12s infinite; }
+.heart:nth-child(2) { left: 20%; animation: heart-flutter 15s infinite; }
+.heart:nth-child(3) { left: 30%; animation: heart-flutter 18s infinite; }
+.heart:nth-child(4) { left: 40%; animation: heart-flutter 20s infinite; }
+.heart:nth-child(5) { left: 50%; animation: heart-flutter 25s infinite; }
+.heart:nth-child(6) { left: 60%; animation: heart-flutter 28s infinite; }
+.heart:nth-child(7) { left: 70%; animation: heart-flutter 30s infinite; }
+.heart:nth-child(8) { left: 80%; animation: heart-flutter 35s infinite; }
