@@ -13,21 +13,22 @@ body {
     height: 100vh;
 }
 
-#content {
+#initial-page,
+#response-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     color: white;
     background: rgba(0, 0, 0, 0.8); /* Fundo escuro para destaque */
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
+    position: absolute; /* Permitir sobreposição */
 }
 
-#initial-page {
-    display: block;
-}
-
-#response-page {
+#response-page.hidden {
     display: none;
 }
 
