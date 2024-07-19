@@ -1,16 +1,16 @@
 function handleResponse(response) {
     const initialPage = document.getElementById('initial-page');
     const responsePage = document.getElementById('response-page');
-    const responseMessage = document.getElementById('response-message');
+    const responseText = document.getElementById('response-text');
     
     // Ocultar a página inicial
     initialPage.style.display = 'none';
     
     // Mostrar a página de resposta
-    responsePage.style.display = 'block';
+    responsePage.style.display = 'flex';
     
     // Ajustar a mensagem de resposta
-    responseMessage.textContent = response === 'sim'
+    responseText.textContent = response === 'sim'
         ? 'Que ótimo! Estou muito feliz!'
         : 'Entendo. Vamos conversar mais sobre isso!';
 }
