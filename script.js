@@ -1,31 +1,30 @@
-// Página Inicial
-document.getElementById('yes-btn').onclick = function() {
-    window.location.href = 'resposta.html?answer=yes';
-};
+document.getElementById('yes').addEventListener('click', function() {
+    showMessage('Você aceitou o pedido! 💖');
+});
 
-document.getElementById('no-btn').onclick = function() {
-    window.location.href = 'resposta.html?answer=no';
-};
+document.getElementById('no').addEventListener('click', function() {
+    showMessage('Que pena, talvez em outra oportunidade! 😢');
+});
 
-// Página de Resposta
-window.onload = function() {
-    const params = new URLSearchParams(window.location.search);
-    const answer = params.get('answer');
+function showMessage(text) {
+    const message = document.getElementById('message');
+    message.innerText = text;
+    message.style.display = 'block';
+    setTimeout(() => {
+        message.style.display = 'none';
+    }, 3000);
+}
 
-    const messageElement = document.getElementById('response-message');
-    
-    if (answer === 'yes') {
-        messageElement.textContent = 'Amei a resposta! 💖';
-    } else {
-        messageElement.textContent = 'Tudo bem! 😔';
-    }
-
-    // Adicionar corações flutuantes
-    for (let i = 0; i < 10; i++) {
+function createHearts() {
+    const numHearts = 10;
+    for (let i = 0; i < numHearts; i++) {
         const heart = document.createElement('div');
         heart.className = 'heart';
-        heart.style.left = Math.random() * 100 + '%';
-        heart.style.top = Math.random() * 100 + '%';
+        heart.style.top = `${Math.random() * 100}vh`;
+        heart.style.left = `${Math.random() * 100}vw`;
+        heart.style.animationDuration = `${Math.random() * 5 + 3}s`;
         document.body.appendChild(heart);
     }
-};
+}
+
+createHearts();
