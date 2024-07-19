@@ -31,4 +31,121 @@ body {
     z-index: 1; /* Garantir que o conteúdo principal fique acima dos corações */
 }
 
-#i
+#initial-page.hidden,
+#response-page.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 3em; /* Maior tamanho para destaque */
+    margin: 0;
+    font-weight: bold;
+    color: #fff0f0; /* Cor de texto suave */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para melhor legibilidade */
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 15px 30px; /* Tamanho aumentado para melhor usabilidade */
+    font-size: 1.2em; /* Tamanho aumentado para legibilidade */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    outline: none;
+}
+
+button:first-of-type {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button:last-of-type {
+    background-color: #f44336;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#response-message {
+    font-size: 2.5em; /* Tamanho maior para maior impacto */
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.6); /* Fundo escuro para destacar a mensagem */
+    animation: fadeIn 1s ease-out;
+    position: relative; /* Para posicionamento dos corações flutuantes */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#heart-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Corações não devem interferir com cliques */
+    overflow: hidden;
+    z-index: 0; /* Garantir que os corações fiquem atrás do conteúdo principal */
+}
+
+.heart {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: #ff4d4d;
+    transform: rotate(-45deg);
+    animation: heart-float 15s infinite ease-in-out;
+    opacity: 0.7;
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    position: absolute;
+    background: #ff4d4d;
+    border-radius: 50%;
+}
+
+.heart:before {
+    width: 70px;
+    height: 70px;
+    top: -35px;
+    left: 0;
+}
+
+.heart:after {
+    width: 70px;
+    height: 70px;
+    left: 35px;
+    top: 0;
+}
+
+@keyframes heart-float {
+    0% { transform: translateY(0) rotate(-45deg); opacity: 0.7; }
+    50% { transform: translateY(-60vh) rotate(-45deg); opacity: 0.5; }
+    100% { transform: translateY(-120vh) rotate(-45deg); opacity: 0; }
+}
+
+/* Estilo para gerar múltiplos corações no fundo */
+.heart:nth-child(1) { left: 10%; top: 10%; animation-duration: 20s; }
+.heart:nth-child(2) { left: 25%; top: 25%; animation-duration: 25s; }
+.heart:nth-child(3) { left: 40%; top: 10%; animation-duration: 30s; }
+.heart:nth-child(4) { left: 55%; top: 30%; animation-duration: 35s; }
+.heart:nth-child(5) { left: 70%; top: 20%; animation-duration: 40s; }
+.heart:nth-child(6) { left: 85%; top: 40%; animation-duration: 45s; }
+.heart:nth-child(7) { left: 10%; top: 60%; animation-duration: 50s; }
+.heart:nth-child(8) { left: 25%; top: 80%; animation-duration: 55s; }
