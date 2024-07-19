@@ -11,6 +11,8 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100vw;
+    position: relative;
 }
 
 #initial-page,
@@ -26,8 +28,11 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: absolute; /* Permitir sobreposição */
+    width: 100%; /* Garantir que o conteúdo ocupe a largura total */
+    height: 100%; /* Garantir que o conteúdo ocupe a altura total */
 }
 
+#initial-page.hidden,
 #response-page.hidden {
     display: none;
 }
@@ -86,10 +91,7 @@ button:hover {
     background: rgba(0, 0, 0, 0.6); /* Fundo escuro para destacar a mensagem */
     animation: fadeIn 1s ease-out;
     position: relative; /* Para posicionamento dos corações flutuantes */
-}
-
-.hidden {
-    display: none;
+    z-index: 1; /* Garantir que a mensagem fique acima dos corações */
 }
 
 @keyframes fadeIn {
