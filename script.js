@@ -15,13 +15,13 @@ function handleResponse(response) {
 
 function createHearts() {
     const heartsContainer = document.getElementById('hearts');
-    heartsContainer.innerHTML = ''; // Clear any existing hearts
+    heartsContainer.innerHTML = ''; // Limpar corações existentes
     for (let i = 0; i < 20; i++) {
         const heart = document.createElement('div');
         heart.classList.add('heart');
         heart.style.left = `${Math.random() * 100}vw`;
         heart.style.top = `${Math.random() * 100}vh`;
-        heart.style.animationDuration = `${Math.random() * 8 + 8}s`; // Slower animation
+        heart.style.animationDuration = `${Math.random() * 8 + 8}s`; // Animação mais lenta
         heartsContainer.appendChild(heart);
     }
 }
