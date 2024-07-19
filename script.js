@@ -1,53 +1,19 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    overflow: hidden;
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const yesButton = document.getElementById('yes');
+    const noButton = document.getElementById('no');
+    const message = document.getElementById('message');
 
-.background {
-    position: relative;
-    height: 100vh;
-    background: linear-gradient(135deg, #ffccff, #ff66b2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    yesButton.addEventListener('click', () => {
+        message.textContent = "YAY! 💖 Você disse SIM! 🥳";
+        message.style.display = 'block';
+        yesButton.style.background = '#ff99cc';
+        noButton.style.background = '#ff3333';
+    });
 
-.heart {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: linear-gradient(135deg, #ff6699, #ff3366);
-    clip-path: path('M 200,100 Q 270,30 340,100 T 440,200 Q 340,300 200,200 Q 60,100 200,100 Z');
-    opacity: 0.4;
-    z-index: -1;
-    animation: float 8s infinite ease-in-out;
-}
-
-.overlay {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-}
-
-h1 {
-    margin-bottom: 20px;
-    font-size: 32px;
-    color: #ff66b2;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0
+    noButton.addEventListener('click', () => {
+        message.textContent = "Oh não! 😢 Você disse NÃO!";
+        message.style.display = 'block';
+        yesButton.style.background = '#ff66b2';
+        noButton.style.background = '#ff9999';
+    });
+});
