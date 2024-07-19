@@ -1,18 +1,16 @@
 function handleResponse(response) {
-    const mainQuestion = document.getElementById('main-question');
-    const subtext = document.querySelector('.subtext');
-    const buttons = document.getElementById('buttons');
+    const initialPage = document.getElementById('initial-page');
+    const responsePage = document.getElementById('response-page');
     const responseMessage = document.getElementById('response-message');
     
-    mainQuestion.style.display = 'none';
-    subtext.style.display = 'none';
-    buttons.style.display = 'none';
-
-    responseMessage.classList.remove('hidden');
-
-    if (response === 'sim') {
-        responseMessage.textContent = 'Que ótimo! Estou muito feliz!';
-    } else {
-        responseMessage.textContent = 'Entendo. Vamos conversar mais sobre isso!';
-    }
+    // Ocultar a página inicial
+    initialPage.style.display = 'none';
+    
+    // Mostrar a página de resposta
+    responsePage.style.display = 'block';
+    
+    // Ajustar a mensagem de resposta
+    responseMessage.textContent = response === 'sim'
+        ? 'Que ótimo! Estou muito feliz!'
+        : 'Entendo. Vamos conversar mais sobre isso!';
 }
