@@ -28,3 +28,8 @@ function createHearts() {
 }
 
 createHearts();
+document.getElementById('yes').addEventListener('click', function() {
+    setTimeout(() => {
+        window.location.href = 'second-page.html';
+    }, 500); // Adiciona um pequeno atraso para permitir a visualização da mensagem
+});
