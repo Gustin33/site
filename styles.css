@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     overflow: hidden;
-    background: linear-gradient(135deg, #ff6b6b, #f06595); /* Fundo gradiente */
+    background: linear-gradient(135deg, #ff6b6b, #f06595); /* Gradiente rosa */
 }
 
 #container {
@@ -16,7 +16,7 @@ body {
 #content {
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, 0.6); /* Fundo translúcido */
+    background: rgba(0, 0, 0, 0.6); /* Fundo translúcido para destaque */
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -44,7 +44,7 @@ button {
     padding: 15px 30px;
     font-size: 1.2em;
     border: none;
-    border-radius: 25px; /* Borda mais arredondada */
+    border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     outline: none;
@@ -74,52 +74,3 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.8);
-    text-align: center;
-    color: white;
-}
-
-.hidden {
-    display: none;
-}
-
-#response-message {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    font-weight: bold;
-}
-
-@keyframes heart-float {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(-100vh); opacity: 0; }
-}
-
-.heart {
-    position: absolute;
-    background: red;
-    width: 50px; /* Maior tamanho */
-    height: 50px; /* Maior tamanho */
-    border-radius: 50%;
-    transform: rotate(-45deg);
-    animation: heart-float 8s infinite; /* Animação mais lenta */
-}
-
-.heart:before, .heart:after {
-    content: '';
-    background: red;
-    width: 50px; /* Maior tamanho */
-    height: 50px; /* Maior tamanho */
-    border-radius: 50%;
-    position: absolute;
-}
-
-.heart:before {
-    top: -25px;
-    left: 0;
-}
-
-.heart:after {
-    left: 25px;
-    top: 0;
-}
