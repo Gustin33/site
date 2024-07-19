@@ -1,27 +1,14 @@
 function handleResponse(response) {
+    const content = document.getElementById('content');
     const responseContainer = document.getElementById('response-container');
     const responseMessage = document.getElementById('response-message');
+    
+    content.style.display = 'none';
+    responseContainer.classList.remove('hidden');
 
     if (response === 'sim') {
-        responseMessage.innerHTML = 'Uhul! Você aceitou! 💖<br>Que felicidade!';
+        responseMessage.textContent = 'Que ótimo! Estou muito feliz!';
     } else {
-        responseMessage.innerHTML = 'Tudo bem, sem problemas.<br>Podemos ser amigos!';
-    }
-
-    document.getElementById('container').style.display = 'none';
-    responseContainer.classList.remove('hidden');
-    createHearts();
-}
-
-function createHearts() {
-    const heartsContainer = document.getElementById('hearts');
-    heartsContainer.innerHTML = ''; // Limpar corações existentes
-    for (let i = 0; i < 20; i++) {
-        const heart = document.createElement('div');
-        heart.classList.add('heart');
-        heart.style.left = `${Math.random() * 100}vw`;
-        heart.style.top = `${Math.random() * 100}vh`;
-        heart.style.animationDuration = `${Math.random() * 8 + 8}s`; // Animação mais lenta
-        heartsContainer.appendChild(heart);
+        responseMessage.textContent = 'Entendo. Vamos conversar mais sobre isso!';
     }
 }
