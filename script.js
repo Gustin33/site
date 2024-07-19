@@ -16,12 +16,12 @@ function handleResponse(response) {
 function createHearts() {
     const heartsContainer = document.getElementById('hearts');
     heartsContainer.innerHTML = ''; // Clear any existing hearts
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 20; i++) {
         const heart = document.createElement('div');
         heart.classList.add('heart');
         heart.style.left = `${Math.random() * 100}vw`;
         heart.style.top = `${Math.random() * 100}vh`;
-        heart.style.animationDuration = `${Math.random() * 5 + 5}s`;
+        heart.style.animationDuration = `${Math.random() * 8 + 8}s`; // Slower animation
         heartsContainer.appendChild(heart);
     }
 }
