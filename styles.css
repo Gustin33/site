@@ -110,34 +110,36 @@ button:hover {
 
 .heart {
     position: absolute;
-    background: red;
-    width: 60px;
-    height: 60px;
+    background: radial-gradient(circle at 30% 30%, #ff4d4d, #ff0000); /* Gradiente para efeito de coração */
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     transform: rotate(-45deg);
-    animation: heart-float 10s infinite;
+    animation: heart-float 12s infinite ease-in-out;
+    opacity: 0.7;
 }
 
 .heart:before, .heart:after {
     content: '';
-    background: red;
-    width: 60px;
-    height: 60px;
+    background: radial-gradient(circle at 30% 30%, #ff4d4d, #ff0000);
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     position: absolute;
 }
 
 .heart:before {
-    top: -30px;
+    top: -40px;
     left: 0;
 }
 
 .heart:after {
-    left: 30px;
+    left: 40px;
     top: 0;
 }
 
 @keyframes heart-float {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(-100vh); opacity: 0; }
+    0% { transform: translateY(0) rotate(-45deg); opacity: 0.7; }
+    50% { transform: translateY(-50vh) rotate(-45deg); opacity: 0.5; }
+    100% { transform: translateY(-100vh) rotate(-45deg); opacity: 0; }
 }
